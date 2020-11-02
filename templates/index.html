@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{%block head %}
+<title> Get Transliteration</title>
+    <script>
+        function transliterate() {
+            var content= $('#content').val();
+            var op = $('#show-data').val();
+            op = '';
+            $.ajax({
+                url: "/transliterate",
+                type: "POST",
+                data: {content:content}
+            }).done(function(response) {
+                var html= "<br><br><br><p> <b> RESULT : <b><p>";
+                response =response.result;
+                $.each(response,function(key,val){
+                    console.log(val);
+                    op+=val+'\n'});
+
+                $('#show-data').val(op);
+            });
+        }
+    </script>
+{% endblock %}
+
+{%block body %}
+<div id="container">
+    <div class="speech">Put the text to transliterate</div>
+    <div class="input">
+            Enter text:
+            <input type="text" name="content" id="content" />
+            <button id="clicked" onclick="transliterate()">Submit</button>
+            <br/>
+            <br/>
+            <br/>
+
+            <output type="text" id="show-data">
+
+            </output>
+
+            <br/>
+            <br/>
+            <br/>
+
+
+    </div>
+</div>
+{% endblock %}

@@ -14,7 +14,7 @@ def home():
 def index():
     input_text = request.form['content']
     word = request.args.get('content')
-    trans = transliterator.Trans(input_text)
+    trans = transliterator.getTransliteration(input_text)
     result = {
         "output": trans
     }

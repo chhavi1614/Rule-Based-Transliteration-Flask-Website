@@ -217,3 +217,20 @@ def Trans(mw):
                 f = f + 1
         # print(output)
     return output
+
+
+def getTransliteration(input):
+    i = 0
+    temp = ''
+    ans = ''
+    input = input + " "
+    while i < len(input):
+        if input[i].isalpha():
+            temp = temp + input[i]
+        else:
+            if temp != '':
+                ans = ans + Trans(temp)
+            temp = ""
+            ans = ans + input[i]
+        i += 1
+    return ans

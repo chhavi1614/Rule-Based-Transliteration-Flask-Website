@@ -1,6 +1,6 @@
 # **Rule-Based-Transliteration-Flask-Website**
 
-This is a local sever Flask web-application to transliterate english text to hindi. To run this application you should FLASK installed in your operating system.
+This is a local sever Flask web-application to transliterate english text to hindi. To run this application you should fave FLASK installed in your operating system.
 
 ### **INSTALLATION**
 1. Fork and Clone Rule-Based-Transliteration-Flask-Website repo.

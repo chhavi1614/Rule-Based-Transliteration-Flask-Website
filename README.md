@@ -9,13 +9,12 @@ This is a local sever Flask web-application to transliterate english text to hin
 
 3. Run the following commands.
 
-       ```
+       
         export FLASK_APP=hello.py
         flask run 
    For Windows run
   
-        ```
          set FLASK_APP=hello.py
          flask run
-        ```
+        
  4. The website is up and running on  http://127.0.0.1:5000/ 
